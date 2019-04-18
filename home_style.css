@@ -1,0 +1,179 @@
+.main
+{
+
+   background-color: yellow;
+  font-family: Arial;
+  color:yellow;
+ }
+
+
+.header{
+	width:100%;
+	height:80px;
+
+
+}
+.main .header .leftlogo img
+{
+	margin-top:0px;
+	margin-left:0px;
+}
+
+.main .header .rightlogo img
+
+{
+	position: absolute;
+	top:9px;
+	right:9px;
+}
+.nav{
+	width:100%;
+	height:35px;
+}
+.nav ul {
+	list-style: none;
+	align-items:center;
+    
+ }
+.nav ul li{
+	float:right;
+	width:213px;
+	height:35px;
+	background-color:black;
+	opacity: .8;
+	line-height: 35px;
+	text-align: center;
+	font-size: 20px;
+	position: relative;
+	border-radius: 8px;
+	margin-right: 5px;
+	}
+.nav ul li a{
+	 text-decoration: none;
+	 color: white;
+	 display: block;
+}
+.nav ul li a:hover
+{
+	background-color: darkkhaki;
+	border-radius: 8px;
+	color: black;
+}
+.nav ul ul
+{  
+    position: relative;
+	display: none;
+}
+.nav ul li:hover > ul{
+
+	display: block;
+	
+	}
+.nav ul ul ul
+{
+	position: absolute;
+	left:174px;
+	top: 0px;
+	
+ }
+
+.body-frames
+{
+	float: left;
+    margin-right:20px;
+}
+
+.links
+{
+	float:left;
+	width:213px;
+	height:35px;
+	background-color:black;
+	opacity: .8;
+	line-height: 35px;
+	text-align: center;
+	font-size: 20px;
+	position: relative;
+	border-radius: 8px;
+	margin-right: 5px;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+
+
+.rect{
+
+}
+.footer{
+	float: bottom;
+	text-align: center;
+	font-size: 20px;
+
+}
+/*
+.nav ul {
+	list-style: none;
+	align-items:center
+    
+ }
+
+ .main .header img{
+ 	width: 1000px;
+ 	height: 95px;
+   align-items: center;
+
+ }
+ 
+ .main .nav img
+ {
+   position: absolute;
+   margin-top: 0px;
+   margin-left:0px;
+}
+.nav ul li{
+	float:right;
+	width:231px;
+	height:35px;
+	background-color:black;
+	opacity: .8;
+	line-height: 35px;
+	text-align: center;
+	font-size: 20px;
+	position: relative;
+	border-radius: 8px;
+	margin-right: 5px;
+	}
+.nav ul li a{
+	 text-decoration: none;
+	 color: white;
+	 display: block;
+}
+.nav ul li a:hover
+{
+	background-color: green;
+	border-radius: 8px;
+}
+.nav ul ul
+{
+    position: absolute;
+	display: none;
+}
+.nav ul li:hover > ul{
+	display: block;
+	
+	}
+.nav ul ul ul
+{
+	margin-left:233px;
+	top: 0px; 
+ }
+ .rect-left{
+	width:280px;
+	height:50px;
+	border:2px solid blue;
+	margin-left: 5px;
+	margin-top: 40px;
+}
+*/
+      

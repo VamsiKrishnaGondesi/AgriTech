@@ -1,0 +1,80 @@
+<? php
+	$db = mysqli_connect('localhost', 'root', '', 'multi_login');
+	$fullname="";
+	$mobile="";
+	$age="";
+	$gender="";
+	$season=$_POST['season'];
+	$district="";
+	$mandal="";
+	$zip="";
+
+	if(isset($_POST['submit_btn']))
+	{# code...
+		detailsSubmit();
+	}
+	function detailsSubmit()
+	{
+		global $db,$fullname,$mobile;
+
+		$fullname    =  e($_POST['fullname']);
+		$mobile       =  e($_POST['mobile']);
+		$age  =  e($_POST['age']);
+		$gender  =  e($_POST['gender']);
+		$season = e($_POST['season']);
+		$district = e($_POST['district']);
+		$mandal = e($_POST['mandal']);
+		$zip = e($_POST['zip']);
+
+		$query = "INSERT INTO 'farmer'(fullName, mobile, age, gender,season,district,mandal,zip,cropName,fertilizer,weather) 
+					  VALUES('$fullname', '$mobile', '$age', '$gender','$season','$district','$mandal','$zip','Rice','Zaeno Bio','23')";
+		mysqli_query($db, $query);
+	//	$logged_in_user_id = mysqli_insert_id($db);
+	//	$_SESSION['user'] = getUserById($logged_in_user_id); // put logged in user in session
+
+	//	$query1 = "SELECT * FROM  'soil','crops' WHERE mandal ='$mandal'" AND soil.soilType==crop.soilType;
+		$results = mysqli_query($db, $query);
+
+
+
+
+
+	/*	 if( !( $results2 = mysql_query( $results ) ) ){
+   			 echo 'Retrieval of data from Database Failed - #'.mysql_errno().': '.mysql_error();
+			  }			else{
+    ?>
+<table border="2">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address Line 1</th>
+      <th>Address Line 2</th>
+      <th>Email Id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php
+      if( mysql_num_rows( $results2 )==0 ){
+        echo '<tr><td colspan="4">No Rows Returned</td></tr>';
+      }else{
+        while( $row = mysql_fetch_assoc( $results2 ) ){
+          echo "<tr><td>{$row['cropName']}</td><td>{$row['soilType']}</td><td>{$row['mandal']}</td><td>{$row['weather']}</td></tr>\n";
+        }
+      }
+    ?>
+  </tbody>
+</table>
+    <?php
+  }
+
+*/+
+
+
+
+	}
+	function e($val){
+	global $db;
+	return mysqli_real_escape_string($db, trim($val));
+}
+
+?
